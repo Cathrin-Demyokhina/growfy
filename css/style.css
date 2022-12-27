@@ -24,12 +24,13 @@ body {
     flex: 1 1 auto;
 }
 .page__main {
-
 }
 .page__clients {
 }
 .page__services {
 
+}
+.page__why {
 }
 
 /*========================*/
@@ -102,6 +103,30 @@ line-height: 1.43;
     display: flex;
     column-gap: 32px;
     row-gap: 15px;
+}
+.header-main__list {
+
+}
+.header-main__list li {
+    position: relative;
+    min-height: 32px;
+    padding-left: 40px;
+    color: #9c9c9c;
+    padding-top: 4px;
+    line-height: 1.5;
+}
+.header-main__list li:not(:last-child) {
+    margin-bottom: 16px;
+}
+.header-main__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background: rgba(129, 129, 139, 0.1) url("../img/li.svg") center no-repeat;
 }
 
 @media (max-width: 991.98px) {
@@ -342,13 +367,12 @@ line-height: 1.43;
 }
 .main__header::before {
     content: '';
-    background: url('../img/main/decor.svg') 0 0 / 100% no-repeat;
+    background: url('../img/decor.svg') 0 0 / 100% no-repeat;
     width: 122px;
     height: 122px;
     position: absolute;
     left: -34px;
     top: -10px;
-
 }
 .main__text {
     color: #9c9c9c;
@@ -536,5 +560,68 @@ line-height: 1.43;
     }
     .services__column:first-child {
         padding-top: 0px;
+    }
+}
+
+/*===== Why Us Section =====*/
+
+.why {
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+.why__container {
+    display: flex;
+    column-gap: 64px;
+    row-gap: 32px;
+}
+.why__images {
+    flex: 0 1 50%;
+}
+.images-why {
+    display: flex;
+    position: relative;
+    align-self: flex-end;
+}
+.images-why__item {
+    overflow: hidden;
+}
+.images-why__item img {
+    max-width: 100%;
+}
+.images-why__item_1 {
+    border-radius: 90% 0 50% 50% / 50% 0 30% 30%;
+}
+.images-why__item_2 {
+    align-self: flex-end;
+    border-radius: 50% 50% 50% 0;
+}
+.why__content {
+    flex: 0 1 50%;
+    align-self: center;
+}
+.why__header {
+}
+.images-why::before {
+    content: '';
+    background: url('../img/decor.svg') 0 0 / 100% no-repeat;
+    width: 122px;
+    height: 122px;
+    position: absolute;
+    left: -34px;
+    bottom: -10px;
+}
+@media (max-width: 991.98px) {
+    .why {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 767.98px) {
+    .why {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    .why__container {
+        flex-direction: column-reverse;
     }
 }
